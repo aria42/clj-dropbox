@@ -37,14 +37,14 @@ off of [daniel42](http://github.com/daniel42)'s which I've uploaded to [clojars.
     ; to see all operations"
 
     ; Upload local file to dropbox
-    (upload-file client "/path/to-local-file.txt" "dropbox-dir/")
+    (dropbox/upload-file client "/path/to-local-file.txt" "dropbox-dir/")
 
     ; List files in root dropbox director
     ; returns seq of file meta-data 
-    (list-files client "")
+    (dropbox/list-files client "")
 
     ; Get the contents of a file as a string
-    (get-file client "tmp/my-great-idea.txt")
+    (dropbox/get-file client "tmp/my-great-idea.txt")
 
     ; If you want to do several operations with the same user
     ; on the same thread, you can save yourself the trouble
@@ -52,7 +52,7 @@ off of [daniel42](http://github.com/daniel42)'s which I've uploaded to [clojars.
     (dropbox/with-user (new-user-client user-key user-secret)
       (for [[i f] (indexed (dropbox/list-files "")) 
             :when (= (-> f :path (.endsWith ".txt")))]
-        (copy-file (:path f) (str "my-text-files/txt-file-" i))))
+        (dropbox/copy-file (:path f) (str "my-text-files/txt-file-" i))))
     
 
 # Author #
