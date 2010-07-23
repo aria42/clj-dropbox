@@ -121,7 +121,6 @@
      (let [path (if (.startsWith #^String path "/")
 		  (.replaceAll #^String path "^/+" "")
 		  path)
-	   _ (swank.core/break)
 	   mode (-> client :opts :mode)]
        (-> ((:req-fn client) :GET (str (constants/drbx-metadata-host mode) path)
 		   {:list  "true"})
