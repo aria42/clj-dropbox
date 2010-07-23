@@ -27,7 +27,8 @@ off of [daniel42](http://github.com/daniel42)'s which I've uploaded to [clojars.
              (dropbox/request-user-authorization consumer my-callback-url)]
       ; User grants you access
       (println "Dear user authorize me at " authorization-url)
-      ; After this is done and my-callback-url is pinged
+      ; After this is done and my-callback-url is pinged 
+      ; (you can leave my-callback-url as  nil)
       (let [[user-key user-secret] (request-callback)]
         (println "I have user token info!")))  
 
