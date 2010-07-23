@@ -13,7 +13,7 @@ off of [daniel42](http://github.com/daniel42)'s which I've uploaded to [clojars.
 
 # Example #
 
-    (require ['clj-dropbox.client :as dropbox])
+    (require '[clj-dropbox.client :as dropbox])
 
     ; First you make a `consumer' which represents your 
     ; Dropbox  credientials you need to interact with Dropbox's OAuth. 
@@ -54,3 +54,11 @@ off of [daniel42](http://github.com/daniel42)'s which I've uploaded to [clojars.
             :when (= (-> f :path (.endsWith ".txt")))]
         (copy-file (:path f) (str "my-text-files/txt-file-" i))))
     
+
+# Author #
+Aria Haghighi (aria42@gmail.com)
+http://csail.mit.edu/~aria42
+
+# Support #
+
+Email author with any issues.
