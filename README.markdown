@@ -63,3 +63,9 @@ Aria Haghighi (aria42@gmail.com)
 # Support #
 
 Email author with any issues.
+
+# License #
+
+Copyright (C) 2010 Aria Haghighi
+
+Distributed under the Eclipse Public License, the same as Clojure uses. See the file License.
