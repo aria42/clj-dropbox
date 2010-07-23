@@ -106,7 +106,7 @@
 	     {:file file-name}
 	     :BODY (doto (MultipartEntity.)
 		     (.addPart "file" (FileBody. local-file))))))))
-  ([remote-dir local-path] (upload-file remote-dir local-path)))
+  ([remote-dir local-path] (upload-file *client* remote-dir local-path)))
 
 (defn list-files
   "returns a seq of file metadata for the given
