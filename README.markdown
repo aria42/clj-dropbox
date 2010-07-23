@@ -67,6 +67,8 @@ Email author with any issues.
 # Todo #
 
 * Make SSL an option
+* Support creating an account
+* Support the OAuth-bypass Dropbox allows. Its dangerous though!
 
 # License #
 
