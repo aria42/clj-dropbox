@@ -37,7 +37,7 @@ off of [daniel42](http://github.com/daniel42)'s which I've uploaded to [clojars.
     ; to see all operations"
 
     ; Upload local file to dropbox
-    (upload-file client "/path/to-local-file.txt" /dropbox-dir/)
+    (upload-file client "/path/to-local-file.txt" "dropbox-dir/")
 
     ; List files in root dropbox director
     ; returns seq of file meta-data 
