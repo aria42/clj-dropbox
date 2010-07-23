@@ -97,7 +97,7 @@
 
    NOTE: It seems like Dropbox will create the directory structure
    of the remote path if it doesn't exist."
-  ([client remote-dir local-path]
+  ([client local-path remote-dir]
      (let [mode (-> client :opts :mode)
 	   local-file (io/file local-path) file-name (.getName local-file)]
        
