@@ -97,15 +97,15 @@
 
    NOTE: It seems like Dropbox will create the directory structure
    of the remote path if it doesn't exist."
-
   ([client remote-dir local-path]
      (let [mode (-> client :opts :mode)
 	   local-file (io/file local-path) file-name (.getName local-file)]
-       (ensure-content
-	(-> ((:req-fn client) :POST (str (constants/drbx-files-host mode) remote-dir)
-	     {:file file-name}
-	     :BODY (doto (MultipartEntity.)
-		     (.addPart "file" (FileBody. local-file))))))))
+       
+       (-> ((:req-fn client) :POST (str (constants/drbx-files-host mode) remote-dir)
+	    {:file file-name}
+	    :BODY (doto (MultipartEntity.)
+		    (.addPart "file" (FileBody. local-file))))
+	   ensure-content)))
   ([remote-dir local-path] (upload-file *client* remote-dir local-path)))
 
 (defn list-files
