@@ -49,7 +49,7 @@ off of [daniel42](http://github.com/daniel42)'s which I've uploaded to [clojars.
     ; If you want to do several operations with the same user
     ; on the same thread, you can save yourself the trouble
     ; of using the client argument everywhere
-    (dropbox/with-user (new-user-client user-key user-secret)
+    (dropbox/with-user (new-user-client consumer user-key user-secret)
       (doseq [[i f] (indexed (dropbox/list-files "")) 
             :when (= (-> f :path (.endsWith ".txt")))]
         (dropbox/copy-file (:path f) (str "my-text-files/txt-file-" i))))
