@@ -1,4 +1,4 @@
-# OAuth support for Clojure #
+# Clojure bindings to Dropbox API #
 
 `clj-dropbox`  provides clojure bindings to the [Dropbox API](http://developer.dropbox.com).
 In order to use this library, you need to at least setup as a Dropbox developer and 
@@ -58,7 +58,7 @@ off of [daniel42](http://github.com/daniel42)'s which I've uploaded to [clojars.
 # Author #
 Aria Haghighi (aria42@gmail.com) 
 
-http://csail.mit.edu/~aria42
+[My Website](http://csail.mit.edu/~aria42)
 
 # Support #
 
