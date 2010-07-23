@@ -64,6 +64,10 @@ Aria Haghighi (aria42@gmail.com)
 
 Email author with any issues.
 
+# Todo #
+
+* Make SSL an option
+
 # License #
 
 Copyright (C) 2010 Aria Haghighi
