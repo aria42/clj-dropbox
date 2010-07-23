@@ -31,10 +31,9 @@ off of [daniel42](http://github.com/daniel42)'s which I've uploaded to [clojars.
         (println "I have user token info!")))  
 
     ; Once you have user-key and user-secret, make a client 
-    (def client (dropbox/new-user-clien consumer user-key user-secret))
+    (def client (dropbox/new-user-client consumer user-key user-secret))
 
-    ; Now you can do the fun stuff (see src/clj-dropbox/client.clj
-    ; to see all operations"
+    ; Now you can do the fun stuff (see src/clj-dropbox/client.clj)
 
     ; Upload local file to dropbox
     (dropbox/upload-file client "/path/to-local-file.txt" "dropbox-dir/")
