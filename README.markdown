@@ -7,6 +7,7 @@ get an OAuth conumser key. Instructions can be found [here](https://www.dropbox.
 The library depends upon `clj-oauth'. There was a bug in the original project, so I'm working
 off of [daniel42](http://github.com/daniel42)'s which I've uploaded to [clojars.org](http://clojars.org). 
 
+
 # Building #
 
 `lein jar`
@@ -49,7 +50,7 @@ off of [daniel42](http://github.com/daniel42)'s which I've uploaded to [clojars.
     ; on the same thread, you can save yourself the trouble
     ; of using the client argument everywhere
     (dropbox/with-user (new-user-client user-key user-secret)
-      (for [[i f] (indexed (dropbox/list-files "")) 
+      (doseq [[i f] (indexed (dropbox/list-files "")) 
             :when (= (-> f :path (.endsWith ".txt")))]
         (dropbox/copy-file (:path f) (str "my-text-files/txt-file-" i))))
     
