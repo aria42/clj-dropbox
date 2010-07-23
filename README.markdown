@@ -69,6 +69,7 @@ Email author with any issues.
 * Make SSL an option
 * Support creating an account
 * Support the OAuth-bypass Dropbox allows. Its dangerous though!
+* Fix any bugs I'm sure are in this. 
 
 # License #
 
