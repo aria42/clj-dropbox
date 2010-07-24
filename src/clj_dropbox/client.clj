@@ -86,12 +86,13 @@
 
 (defn upload-file
   "Upload a local file to user dropbox.
-   remote-dir: is the dropbox remote directory. If the :mode option
-   is :dropbox, the root is the user's dropbox, if it is :sandbox,
-   the root is the app-specific folder. In either case, use the \"\"
+   remote-dir: is the dropbox remote directory you want the file in.
+   If the :mode option is :dropbox [see new-user-client-client],
+   the remote-dir is relative to the root is the user's dropbox, if it is :sandbox,
+   it is relative to the  app-specific folder. In either case, use the \"\"
    argument for the root.
    local-path: is either a file or string denoting a local file. The
-   uploaded file takes the same name as the local file. Can't get
+   uploaded file takes the same file name as the local file. Can't get
    the HttpPost to respect the parameter which is meant to control
    the name.
 
@@ -100,8 +101,7 @@
   ([client local-path remote-dir]
      (let [mode (-> client :opts :mode)
 	   local-file (io/file local-path) file-name (.getName local-file)]
-       
-       (-> ((:req-fn client) :POST (str (constants/drbx-files-host mode) remote-dir)
+        (-> ((:req-fn client) :POST (str (constants/drbx-files-host mode) remote-dir)
 	    {:file file-name}
 	    :BODY (doto (MultipartEntity.)
 		    (.addPart "file" (FileBody. local-file))))

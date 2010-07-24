@@ -4,8 +4,7 @@
 In order to use this library, you need to at least setup as a Dropbox developer and 
 get an OAuth conumser key. Instructions can be found [here](https://www.dropbox.com/developers/quickstart). 
 
-The library depends upon `clj-oauth'. There was a bug in the original project, so I'm working
-off of [daniel42](http://github.com/daniel42)'s which I've uploaded to [clojars.org](http://clojars.org). 
+The library depends upon `clj-oauth' version 1.2.1 and which is in [clojars.org](http://clojars.org). 
 
 
 # Building #
