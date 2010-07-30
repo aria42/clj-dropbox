@@ -217,6 +217,6 @@
 ;;   "Returns [user-key user-secret] for making
 ;;   a user connection. Dropbox lets you bypass
 ;;   the oauth dance once per user; so don't use this
-;;   call too much. Store the results as well. "
+;;   call too much. Store the results as well, but not the password! "
 ;;   [client user-email user-password]
-;;   nil)
+;;   (throw (RuntimeException. "Not Implemented Yet!")))
